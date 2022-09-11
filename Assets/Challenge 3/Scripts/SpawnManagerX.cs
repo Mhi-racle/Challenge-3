@@ -14,7 +14,8 @@ public class SpawnManagerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval);
+
+        InvokeRepeating("SpawnObjects", spawnDelay, Random.Range(2, 4));
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX>();
     }
 
